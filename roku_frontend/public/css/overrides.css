@@ -1,0 +1,17 @@
+#main-view {
+    padding-top: 90px;
+    text-align: center;
+}
+
+.avatar {
+    display: inline-block;
+    margin: 0 2em;
+}
+
+.field-error {
+    border: 2px solid red;
+}
+
+.signup-submit {
+    margin-left: 1em;
+}

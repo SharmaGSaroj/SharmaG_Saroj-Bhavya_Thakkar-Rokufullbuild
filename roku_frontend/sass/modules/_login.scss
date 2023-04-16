@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  
+}
+
+.jumbotron {
+  color: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+}
+
+.jumbotron img {
+  margin-right: 0.5rem;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.log-in input {
+  margin-bottom: 0.5rem;
+}
+
+.login-submit {
+  background-color: #9307f7;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.login-submit:hover{
+  background-color: #54058d;
+}
+.register-submit{
+    background-color: #9307f7;
+    margin-top: 2rem;
+   
+  }
+  
+  .register-submit:hover{
+    background-color: #54058d;
+  }
