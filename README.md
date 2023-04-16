@@ -1,4 +1,4 @@
-
+![Logo](roku_frontend/public/images/roku.svg)
 
 # Roku Flashback Project
  BHAVYA THAKKAR & SAROJ SHARMA -  Roku Flashback Project
@@ -14,12 +14,12 @@
 
 A media streaming app to watch and listen to music, movies and tv shows from the 50s - 90s. Jump back to the past with Roku Flashback.
 
-This is a work in progress. 
-
-## Assignment Requirements:
-
 ## Additional Resources:
+[Nodejs]( https://nodejs.org/en 'Nodejs')
 
+[ExpressJs]( https://expressjs.com/ 'ExpressJs')
+
+[IMDB-API]( https://imdb-api.com/ 'IMDB-API')
 
 ## Technologies Used
 
@@ -39,12 +39,27 @@ This is a work in progress.
 [CSS Gradient Generator](https://cssgradient.io/ 'CSSGradient.io') 
 
 ### Tutorials:
-[CSS Animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation 'MDN web docs')
+[Vuejs]( https://vuejs.org/guide/introduction.html )
 
 
-## Installation:
+## Installation
 
-No particular installation required. Download repo and open in a code editor. Content will require a Live Server to view properly.
+Install node_modules with npm
+
+```bash
+  npm install  
+```
+Run the RokuUms
+
+```bash
+  node start  
+```
+
+Run the rokufrontend
+
+```bash
+  node start  
+```
 
 
 ## MIT License:
