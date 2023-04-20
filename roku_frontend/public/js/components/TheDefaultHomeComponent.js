@@ -19,6 +19,11 @@ export default {
   </nav>
 </div>
 
+<div class="featured-movie" v-if="featuredMovie">
+<img :src="featuredMovie.img" alt="Featured movie poster">
+</div>
+
+
   <ul class="movie-list">
     <li v-for="movie in activeTab === 'movies' ? movieList : (activeTab === 'series' ? seriesList : musicList)" :key="movie.id" class="movie-card" @click="showMovieDetails(movie.id)">
       <img :src="movie.img" alt="Movie poster">
@@ -51,7 +56,7 @@ export default {
         movieList: [],
         seriesList: [],
         selectedMovie: null,
-        
+        featuredMovie: null 
       };
   },
 
@@ -59,7 +64,10 @@ export default {
    
       const movieApiUrl = `https://imdb-api.com/API/AdvancedSearch/k_ky04vr2n?title_type=movie&release_date=1950-01-01,1990-01-01`;
       const seriesApiUrl = `https://imdb-api.com/API/AdvancedSearch/k_ky04vr2n?title_type=tv_series&release_date=1950-01-01,1990-01-01`;
-    
+      const featuredMovieApiUrl = `https://imdb-api.com/API/Search/k_ky04vr2n/inception`;
+
+      
+
       // Fetch movie data
       fetch(movieApiUrl)
         .then(response => response.json())
@@ -92,7 +100,30 @@ export default {
           }
         })
         .catch(error => console.log(error));
-    },
+  
+  
+        // Fetch data for featured movie
+          fetch(featuredMovieApiUrl)
+            .then(response => response.json())
+            .then(data => {
+            if (data.results && data.results.length > 0) {
+              const featuredMovie = data.results[0];
+              this.featuredMovie = {
+                id: featuredMovie.id,
+                name: featuredMovie.title,
+                img: featuredMovie.image,
+              };
+            } else {
+              console.log('No featured movie found');
+            }
+          })
+          .catch(error => console.log(error));
+        },
+
+
+    // Fetch data for featured movie
+
+
 
     methods: {
       showMovieDetails(movieId) {
